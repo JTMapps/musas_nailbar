@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello!</title>
+    <meta name="description" content="description">
+    <meta name="author" content="author">
+    <meta name="keywords" content="keywords">
+
+    <!--css link files-->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/reset-css@5.0.1/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <body>
+
+    <!-- The Header Page Includes A logo and the SignOut(Profile) and SignUp(Dropdown) Buttons -->
+    <div class="container">
+        <div class="row">
+
+          <div class="col-xs-6 col-sm-8 col-md-10 col-lg-10">MUSAs NAILBAR</div>
+          
+          <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
+            <button type="button" class="btn btn-info" id="signOutButton">sign out</button>
+          </div>
+
+          <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
+
+            <div class=" dropdown">
+              <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Client Space<span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="createAcc.html">sign up</a></li>
+                <li><a href="#">about site</a></li>
+              </ul>
+            </div>
+            
+          </div>
+
+
+      </div>
+    </div>
+
+    <!-- takes user to our Nailbar Service Menu-->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="container">
+            <section class="serviceMenu">
+              <h3>Book your appointment with Musas Nailbar</h3>
+                <a id="serviceMenuTag" href="menu.html">see our Nailbar services menu</a>
+            </section>
+          </div>
+        </div>
+    </div>
+
+    <!-- a scrollable view of recent our recent client nailart (newest first)
+    <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-3">
+              <div class="thumnail">
+                <a href="#" alt="Recent Nailart Img">
+                  <img src="#" alt="Recent Nailart" style="width: 100%"></img>
+                    <div class="caption">
+                          <p>date and time</p>
+                    </div>
+                </a>
+              </div>
+          </div>
+        </div>
+    </div> -->
+
+    <!--client reviews received from the client in their profile page-->
+    <div class="container">
+      <h3>our client reviews</h3>
+      <div class="row">
+        <section>
+          <h3>client reviews here</h3>
+        </section>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="container-fluid">
+        <ul>
+            <li><a href="https://instagram.com/jtmapps?igshid=OGQ5ZDc2ODk2ZA==">Instagram<i class='bx bxl-instagram'></i></a></li>
+            <li><a href="https://wa.link/0ylhz0">Whatsapp<i class='bx bxl-whatsapp-square'></i></a></li>
+        </ul>
+    </div>
+
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!--DOMContentLoaded listener-->
+    <script type="text/javascript">
+        function autorun() {}
+          if (document.addEventListener)
+            document.addEventListener('DOMContentLoaded', autorun, false)
+          else window.onload = autorun
+    </script>
+
+    <script src="js/createAcc.js"></script>
+    <script src="js/login.js"></script>
+    <scrip src="index.js"></scrip>
+
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="createAcc.html">
+
+  </body>
+</html>
