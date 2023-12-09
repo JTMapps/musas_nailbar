@@ -28,6 +28,7 @@ const userlastName = document.querySelector("#userlastName");
 const userPhoneNumber = document.querySelector("#userPhoneNumber");
 const signOutButton = document.querySelector("#signOutButton");
 const signUpButton = document.querySelector("#signUpButton");
+const signInButton = document.querySelector("#signInButton");
 const userEmail = document.querySelector("#userEmail");
 const userPassword = document.querySelector("#userPassword");
 
@@ -65,6 +66,9 @@ const userSignIn = async() => {
         console.log(errorCode + errorMessage)
     })
 }
+
+signInButton.addEventListener('click', userSignIn);
+
 
 const userSignUp = async() => {
     const signUpEmail = userEmail.value;

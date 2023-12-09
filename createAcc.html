@@ -8,7 +8,7 @@
     <meta name="author" content="author">
     <meta name="keywords" content="keywords">
 
-    <script src="js/index.js"></script>
+    <script src="js/index.js" type="module"></script>
   </head>
 
   <body>
@@ -16,29 +16,29 @@
     <form>
         <!-- First Name input-->
         <div class="form-outline mb-4">
-            <input type="text"  class="form-control" placeholder="first name"/>
-            <label class="form-label" for="">First Name</label>
+            <label class="form-label" for="userfirstName">First Name</label>
+            <input type="text"  id="userfirstName" class="form-control" placeholder="first name"/>
         </div>
         <!-- Last Name input-->
         <div class="form-outline mb-4">
-            <input type="text" id="" class="form-control" placeholder="last name"/>
-            <label class="form-label" for="f">Last Name</label>
+            <label class="form-label" for="userlastName">Last Name</label>
+            <input type="text" id="userlastName" class="form-control" placeholder="last name"/>
         </div>
         <!-- Phone Number input-->
         <div class="form-outline mb-4">
-            <input type="tel" id="" class="form-control" placeholder="phone number"/>
-            <label class="form-label" for="">Phone Number</label>
+            <label class="form-label" for="userPhoneNumber">Phone Number</label>
+            <input type="tel" id="userPhoneNumber" class="form-control" placeholder="phone number"/>
         </div>
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="" class="form-control" placeholder="e-Mail"/>
-          <label class="form-label" for="">Email address</label>
+          <label class="form-label" for="userEmail">Email address</label>
+          <input type="email" id="userEmail" class="form-control" placeholder="e-Mail"/>
         </div>
       
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="" class="form-control" placeholder="password"/>
           <label class="form-label" for="">Password</label>
+          <input type="password" id="userPassword" class="form-control" placeholder="password"/>
         </div>
     
       
