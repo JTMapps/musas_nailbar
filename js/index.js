@@ -22,14 +22,14 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase();
 
-const userfirstName = document.querySelector("#userfirstName");
-const userlastName = document.querySelector("#userlastName");
-const userPhoneNumber = document.querySelector("#userPhoneNumber");
-const signOutButton = document.querySelector("#signOutButton");
-const signUpButton = document.querySelector("#signUpButton");
-const signInButton = document.querySelector("#signInButton");
-const userEmail = document.querySelector("#userEmail");
-const userPassword = document.querySelector("#userPassword");
+const userfirstName = document.getElementById("#userfirstName");
+const userlastName = document.getElementById("#userlastName");
+const userPhoneNumber = document.getElementById("#userPhoneNumber");
+const signOutButton = document.getElementById("#signOutButton");
+const signUpButton = document.getElementById("#signUpButton");
+const signInButton = document.getElementById("#signInButton");
+const userEmail = document.getElementById("#userEmail");
+const userPassword = document.getElementById("#userPassword");
 
 const userSignOut = async() => {
     await signOut(auth);
