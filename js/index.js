@@ -31,11 +31,6 @@ const signInButton = document.getElementById("#signInButton");
 const userEmail = document.getElementById("#userEmail");
 const userPassword = document.getElementById("#userPassword");
 
-const userSignOut = async() => {
-    await signOut(auth);
-}
-
-signOutButton.addEventListener("click", userSignOut);
 
 const checkAuthState = async() => {
 onAuthStateChanged(auth, user => {
@@ -66,8 +61,6 @@ const userSignIn = async() => {
     })
 }
 
-signInButton.addEventListener('click', userSignIn);
-
 
 const userSignUp = async() => {
     const signUpEmail = userEmail.value;
@@ -86,7 +79,7 @@ const userSignUp = async() => {
     })
 }
 
-signUpButton.addEventListener('click', userSignUp);
+
 
 function InsertData(){
     set(ref(db, "People/" + firebase.auth().currentUser.uid + "person/", {
@@ -102,4 +95,12 @@ function InsertData(){
         alert(error);
     })
 )};
+
+const userSignOut = async() => {
+    await signOut(auth);
+}
+
+signUpButton.addEventListener('click', userSignUp);
+signOutButton.addEventListener("click", userSignOut);
+signInButton.addEventListener('click', userSignIn);
 
