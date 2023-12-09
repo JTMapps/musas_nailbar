@@ -25,9 +25,6 @@ const db = getDatabase();
 const userfirstName = document.getElementById("#userfirstName");
 const userlastName = document.getElementById("#userlastName");
 const userPhoneNumber = document.getElementById("#userPhoneNumber");
-const signOutButton = document.getElementById("#signOutButton");
-const signUpButton = document.getElementById("#signUpButton");
-const signInButton = document.getElementById("#signInButton");
 const userEmail = document.getElementById("#userEmail");
 const userPassword = document.getElementById("#userPassword");
 
