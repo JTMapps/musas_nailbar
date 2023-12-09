@@ -42,24 +42,11 @@ onAuthStateChanged(auth, user => {
         
     }
 })}
-
 	checkAuthState();
-	signOutButton.addEventListener('click', userSignOut);
 
-const userSignIn = async() => {
-    const signInEmail = userEmail.value;
-    const signInPassword = userPassword.value;
-    signInWithEmailAndPassword(auth, signInEmail, signInPassword)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        alert("You have signed in successfully!");
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode + errorMessage)
-    })
-}
+    const userSignOut = async() => {
+        await signOut(auth);
+    }
 
 
 const userSignUp = async() => {
@@ -79,7 +66,20 @@ const userSignUp = async() => {
     })
 }
 
-
+const userSignIn = async() => {
+    const signInEmail = userEmail.value;
+    const signInPassword = userPassword.value;
+    signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+    .then((userCredential) => {
+        const user = userCredential.user;
+        alert("You have signed in successfully!");
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode + errorMessage)
+    })
+}
 
 function InsertData(){
     set(ref(db, "People/" + firebase.auth().currentUser.uid + "person/", {
@@ -96,11 +96,7 @@ function InsertData(){
     })
 )};
 
-const userSignOut = async() => {
-    await signOut(auth);
-}
-
-signUpButton.addEventListener('click', userSignUp);
 signOutButton.addEventListener("click", userSignOut);
+signUpButton.addEventListener('click', userSignUp);
 signInButton.addEventListener('click', userSignIn);
 
