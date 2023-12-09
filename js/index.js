@@ -94,18 +94,18 @@ function InsertData(){
 )};
 
 document.addEventListener('DOMContentLoaded', function(){ 
-    if(this.location.href("index.html")){
-        const signOutButton = document.getElementById("#signOutButton");
-        signOutButton.addEventListener("click", userSignOut);
-    }
-
-    if(this.location.href("createAcc.html")){
-        const signUpButton = document.getElementById("#signUpButton");
-        signUpButton.addEventListener('click', userSignUp);
-    }
-
-    if(this.location.href("login.html")){
-        const signInButton = document.getElementById("#signInButton");
-        signInButton.addEventListener('click', userSignIn);
-    }
+    const signOutButton = document.getElementById("#signOutButton");
+    signOutButton.addEventListener("click", userSignOut);
  })
+
+ document.addEventListener('DOMContentLoaded', function(){ 
+    const signUpButton = document.getElementById("#signUpButton");
+    signUpButton.addEventListener('click', userSignUp);
+ })
+
+ document.addEventListener('DOMContentLoaded', function(){ 
+    const signInButton = document.getElementById("#signInButton");
+    signInButton.addEventListener('click', userSignIn);
+ })
+
+
