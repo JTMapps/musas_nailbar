@@ -96,7 +96,19 @@ function InsertData(){
     })
 )};
 
-signOutButton.addEventListener("click", userSignOut);
-signUpButton.addEventListener('click', userSignUp);
-signInButton.addEventListener('click', userSignIn);
+document.addEventListener('DOMContentLoaded', function(){ 
+    if(this.location.href("index.html")){
+        const signOutButton = document.getElementById("#signOutButton");
+        signOutButton.addEventListener("click", userSignOut);
+    }
 
+    if(this.location.href("createAcc.html")){
+        const signUpButton = document.getElementById("#signUpButton");
+        signUpButton.addEventListener('click', userSignUp);
+    }
+
+    if(this.location.href("login.html")){
+        const signInButton = document.getElementById("#signInButton");
+        signInButton.addEventListener('click', userSignIn);
+    }
+ })
