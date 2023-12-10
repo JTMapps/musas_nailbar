@@ -32,11 +32,9 @@ const userPassword = document.querySelector("#userPassword");
 const checkAuthState= async() => {
 onAuthStateChanged(auth, user => {
     if(user) {
-        console.log("You hve loged in succesfully")
         window.location.href ="index.html";
     }
     else{
-        alert("Hey ... we couldnt log you in");
         
     }
 })}
@@ -70,7 +68,6 @@ const userSignIn = async() => {
     signInWithEmailAndPassword(auth, signInEmail, signInPassword)
     .then((userCredential) => {
         const user = userCredential.user;
-        alert("You have signed in successfully!");
     })
     .catch((error) => {
         const errorCode = error.code;
