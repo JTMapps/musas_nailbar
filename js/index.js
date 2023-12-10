@@ -95,8 +95,6 @@ function InsertData(){
 
 document.addEventListener('DOMContentLoaded', function(){ 
     $("#signOutButton").click(userSignOut);
-
-
     $("#signUpButton").click(userSignUp);
     $("#signInButton").click(userSignIn);
 });
