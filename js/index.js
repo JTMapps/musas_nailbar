@@ -32,7 +32,7 @@ const userPassword = document.querySelector("#userPassword");
 const checkAuthState = async() => {
 onAuthStateChanged(auth, user => {
     if(user) {
-        alert(userCredential+ "You have logged in succesfully");
+        alert("You have logged in succesfully");
         window.location.href ="index.html";
     }
     else{
