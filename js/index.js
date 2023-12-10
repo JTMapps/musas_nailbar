@@ -22,11 +22,11 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase();
 
-const userfirstName = document.getElementById("#userfirstName");
-const userlastName = document.getElementById("#userlastName");
-const userPhoneNumber = document.getElementById("#userPhoneNumber");
-const userEmail = document.getElementById("#userEmail");
-const userPassword = document.getElementById("#userPassword");
+const userfirstName = document.querySelector("#userfirstName");
+const userlastName = document.querySelector("#userlastName");
+const userPhoneNumber = document.querySelector("#userPhoneNumber");
+const userEmail = document.querySelector("#userEmail");
+const userPassword = document.querySelector("#userPassword");
 
 
 const checkAuthState = async() => {
@@ -94,18 +94,10 @@ function InsertData(){
 )};
 
 document.addEventListener('DOMContentLoaded', function(){ 
-    const signOutButton = document.getElementById("#signOutButton");
-    signOutButton.addEventListener("click", userSignOut);
- })
+    $("#signOutButton").click(userSignOut);
 
- document.addEventListener('DOMContentLoaded', function(){ 
-    const signUpButton = document.getElementById("#signUpButton");
-    signUpButton.addEventListener('click', userSignUp);
- })
 
- document.addEventListener('DOMContentLoaded', function(){ 
-    const signInButton = document.getElementById("#signInButton");
-    signInButton.addEventListener('click', userSignIn);
- })
-
+    $("#signUpButton").click(userSignUp);
+    $("#signInButton").click(userSignIn);
+}
 
