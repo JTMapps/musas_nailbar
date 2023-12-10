@@ -29,7 +29,7 @@ const userEmail = document.querySelector("#userEmail");
 const userPassword = document.querySelector("#userPassword");
 
 
-const checkAuthState = async() => {
+const checkAuthState= async() => {
 onAuthStateChanged(auth, user => {
     if(user) {
         alert("You have logged in succesfully");
