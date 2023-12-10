@@ -99,5 +99,5 @@ document.addEventListener('DOMContentLoaded', function(){
 
     $("#signUpButton").click(userSignUp);
     $("#signInButton").click(userSignIn);
-}
+});
 
