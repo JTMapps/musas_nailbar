@@ -32,7 +32,7 @@ const userPassword = document.querySelector("#userPassword");
 const checkAuthState= async() => {
 onAuthStateChanged(auth, user => {
     if(user) {
-        alert("You have logged in succesfully");
+        console.log("You hve loged in succesfully")
         window.location.href ="index.html";
     }
     else{
@@ -87,7 +87,7 @@ function InsertData(){
         phoneNumber: userPhoneNumber.value,
     })
     .then(()=>{
-        alert("Data Added Successfully");
+        console.log("Data Added Successfully");
     })
     .catch((error)=>{
         alert(error);
